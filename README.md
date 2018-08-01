@@ -21,8 +21,6 @@ watcher = Watcher({
 def license_middleware(ctx: Context):
     branch = 'watcher_license_create'
     path = '/LICENSE'
-    commits = ctx.repo.commit_list()
-    newest_commit = commits[0]
     new_content = 'MIT\n\ncreated by joway'
     message = 'add MIT license'
     pr_title = 'Init: MIT License'

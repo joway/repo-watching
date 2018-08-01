@@ -3,7 +3,7 @@ import os
 
 from setuptools import setup
 
-PACKAGE_VERSION = '0.0.2'
+PACKAGE_VERSION = '0.0.3'
 PACKAGE_REQUIRES = [
     'pygithub==1.40',
 ]

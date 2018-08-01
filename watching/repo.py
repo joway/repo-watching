@@ -2,7 +2,7 @@ import logging.config
 
 from github import Repository, GithubException, UnknownObjectException
 
-from watching.exceptions import FileNotExistError, FileExistError, BranchExistError
+from watching.exceptions import FileNotExistError, FileExistError, BranchExistError, PRExistError
 from watching.file import File
 
 logging.config.fileConfig('logging.ini')
@@ -76,4 +76,4 @@ class Repo:
             )
         except GithubException as e:
             logger.error(e)
-            raise PRCreateError
+            raise PRExistError

@@ -51,7 +51,7 @@ class Context:
 
         # create pull request
         try:
-            self.repo.pr_create(
+            return self.repo.pr_create(
                 title=pr_title,
                 body=pr_body,
                 branch=branch,
